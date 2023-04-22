@@ -4,6 +4,7 @@
 def sharedpods
     pod 'RxSwift', '6.5.0'
     pod 'RxCocoa', '6.5.0'
+    pod 'Socket.IO-Client-Swift', '~> 15.2.0'
 end
 
 target 'ChatroomLogin' do
