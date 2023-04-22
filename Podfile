@@ -4,7 +4,6 @@
 def sharedpods
     pod 'RxSwift', '6.5.0'
     pod 'RxCocoa', '6.5.0'
-    pod 'Socket.IO-Client-Swift', '~> 15.2.0'
 end
 
 target 'ChatroomLogin' do
@@ -53,4 +52,13 @@ target 'UseCases' do
 
   # Pods for UseCases
 	sharedpods
+end
+
+target 'KonnectingService' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for KonnectingService
+	sharedpods
+	pod 'Socket.IO-Client-Swift', '~> 15.2.0'
 end
