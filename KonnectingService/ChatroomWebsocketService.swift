@@ -7,6 +7,18 @@
 
 import Foundation
 
+public protocol ChatroomWebSocketAPI {
+
+    func login(username: String, email: String)
+}
+
 public class ChatroomWebsocketService {
 
+}
+
+extension ChatroomWebsocketService: ChatroomWebSocketAPI {
+
+    public func login(username: String, email: String) {
+
+    }
 }
