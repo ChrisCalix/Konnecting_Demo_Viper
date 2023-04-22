@@ -14,6 +14,11 @@ public final class Builder {
 
         let stoyboard = UIStoryboard(name: "ChatroomLogin", bundle: Bundle(for: self))
         let view = ChatroomLoginViewConrtoller.instantiate(from: stoyboard)
+        let router = Router(viewController: view)
+        view.presenterProducer = { input in
+            Presenter(input: input, router: router, useCases: ())
+        }
+        
         return view
     }
 }
