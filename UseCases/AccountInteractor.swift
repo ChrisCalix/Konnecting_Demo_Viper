@@ -5,7 +5,7 @@
 //  Created by Christian Calixto on 22/4/23.
 //
 
-import Foundation
+import RxSwift
 
 public final class AccountInteractor {
 
@@ -13,7 +13,7 @@ public final class AccountInteractor {
 
 extension AccountInteractor {
 
-    func login(username: String, email: String) {
-        
+    func login(username: String, email: String) -> Single<()>{
+        return .never()
     }
 }
