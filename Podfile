@@ -46,3 +46,11 @@ target 'Window' do
   # Pods for Window
 	sharedpods
 end
+
+target 'UseCases' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for UseCases
+	sharedpods
+end
