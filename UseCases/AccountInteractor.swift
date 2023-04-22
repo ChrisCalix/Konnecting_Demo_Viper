@@ -6,15 +6,22 @@
 //
 
 import RxSwift
+import KonnectingService
 
 public final class AccountInteractor {
 
+    private let websocketService: ChatroomWebSocketAPI
+
+    init(websocketService: ChatroomWebSocketAPI) {
+        self.websocketService = websocketService
+    }
 }
 
 extension AccountInteractor {
 
-    func login(username: String, email: String) -> Single<()>{
+    public func login(username: String, email: String) -> Single<()>{
         
+        websocketService.login(username: username, email: email)
         return .never()
     }
 }

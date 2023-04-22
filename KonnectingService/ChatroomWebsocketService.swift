@@ -14,11 +14,12 @@ public protocol ChatroomWebSocketAPI {
 
 public class ChatroomWebsocketService {
 
+    public init() {}
 }
 
 extension ChatroomWebsocketService: ChatroomWebSocketAPI {
 
     public func login(username: String, email: String) {
-
+        print("received username : \(username), and email: \(email)")
     }
 }
