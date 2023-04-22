@@ -57,7 +57,6 @@ private extension ChatroomLoginViewConrtoller {
         loginButton.setImage(UIImage(named: "ic-login", in: Bundle(for: ChatroomLoginViewConrtoller.self), with: nil), for: .normal)
         loginButton.setImage(UIImage(named: "ic-login-disabled", in: Bundle(for: ChatroomLoginViewConrtoller.self), with: nil), for: .disabled)
         loginButton.setImage(UIImage(named: "ic-login-selected", in: Bundle(for: ChatroomLoginViewConrtoller.self), with: nil), for: .highlighted)
-
     }
 
     func setupBinding() {

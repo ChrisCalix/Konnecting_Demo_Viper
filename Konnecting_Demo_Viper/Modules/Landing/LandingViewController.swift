@@ -35,6 +35,6 @@ private extension LandingViewController {
 
         logoImageView.image = UIImage(named: "Logo", in: Bundle(for: LandingViewController.self), with: nil)
         startButton.setImage(UIImage(named: "ic-start", in: Bundle(for: LandingViewController.self), with: nil), for: .normal)
-//        startButton.setTitle("", for: .normal)
+        startButton.setImage(UIImage(named: "ic-start-pressed", in: Bundle(for: LandingViewController.self), with: nil), for: .highlighted)
     }
 }
