@@ -14,6 +14,7 @@ public final class AccountInteractor {
 extension AccountInteractor {
 
     func login(username: String, email: String) -> Single<()>{
+        
         return .never()
     }
 }
