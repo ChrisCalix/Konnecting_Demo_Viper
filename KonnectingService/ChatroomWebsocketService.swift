@@ -17,8 +17,12 @@ public class ChatroomWebsocketService {
 
     private var socketManager: SocketManager!
     private var socket: SocketIOClient!
+    private let socketUrl: String
 
-    public init() {}
+    public init(socketUrl: String) {
+        self.socketUrl = socketUrl
+        setup(using: URL(string: self.socketUrl)!)
+    }
 
     deinit {
         socket.disconnect()
@@ -29,10 +33,11 @@ extension ChatroomWebsocketService: ChatroomWebSocketAPI {
 
     public func login(username: String, email: String) {
         print("received username : \(username), and email: \(email)")
+        self.socket.emit("login", username, email)
     }
 }
 
-extension ChatroomWebsocketService {
+private extension ChatroomWebsocketService {
 
     func setup(using socketUrl: URL) {
 
